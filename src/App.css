@@ -1,0 +1,147 @@
+:root {
+  --buff: #b27b42;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: var(--white);
+  font-family: "Inter", sans-serif;
+  color: var(--black);
+}
+
+/* Navbar */
+.navbar-custom {
+  background-color: var(--buff) !important;
+  box-shadow: 0 4px 15px rgba(178, 123, 66, 0.5);
+}
+
+.navbar-brand img {
+  height: 60px;
+}
+
+.nav-item-custom {
+  color: var(--white) !important;
+  position: relative;
+  margin: 0 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.2s ease;
+}
+
+.nav-item-custom:hover {
+  color: var(--white) !important;
+  transform: scale(1.05);
+}
+
+.nav-item-custom::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 50%;
+  bottom: -6px;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-item-custom:hover::after {
+  width: 100%;
+}
+
+/* Hero */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+              url('/hero.png') center/cover no-repeat;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Carousel - Slide */
+.carousel-img {
+  max-width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+
+.carousel-text p {
+  font-size: 1.1rem;
+  color: var(--black);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Apply Section */
+.apply-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.apply-section h2 {
+  color: var(--buff);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.apply-section p {
+  color: var(--black);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.apply-btn {
+  background-color: var(--buff);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.apply-btn:hover {
+  background-color: #a06d3b;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--buff);
+  color: var(--white);
+  padding: 20px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Hero Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
